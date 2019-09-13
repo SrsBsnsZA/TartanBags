@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Welcome!{% endblock %}</title>
+{% block stylesheets %}
+  <!-- Bootstrap -->
+  <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  {#<link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">#}
+  <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+  <link href="{{asset('assets/css/prettyPhoto.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
+  {% endblock %}
+</head>
+
+<body>
+{{ include("sections/nav.html.twig") }}
+{{ include("sections/slider.html.twig") }}
+{% block body %}
+ 
+{% endblock %}
+{{ include("sections/footer.html.twig") }}
+{% block javascripts %}
+  <script src="{{asset('assets/js/jquery-2.1.1.min.js')}}"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/jquery.prettyPhoto.js')}}"></script>
+  <script src="{{asset('assets/js/jquery.isotope.min.js')}}"></script>
+  <script src="{{asset('assets/js/wow.min.js')}}"></script>
+  <script src="{{asset('assets/js/functions.js')}}"></script>
+{% endblock %}
+</body>
+</html>

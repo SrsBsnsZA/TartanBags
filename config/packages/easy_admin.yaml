@@ -1,0 +1,52 @@
+easy_admin:
+    site_name: '<em style="font-size: 80%;">Tartan Bags</em>'
+    user:
+        display_name: true
+    design:
+        brand_color: '#ff0000'
+        assets:
+#            css:
+#                - 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+        menu:
+            - { label: 'Users' }
+            - { entity: 'User', label: 'Users', icon: 'user' }
+            - { entity: 'News', label: 'News', icon: 'paper' }
+            - { entity: 'Events', label: 'Events', icon: 'calendar' }
+            - { entity: 'Payment', label: 'Payments', icon: 'money' }
+            - { entity: 'Score', label: 'Scores', icon: 'file' }
+    entities:
+        News:
+            class: App\Entity\News
+            list:
+                title: "Event News"
+                max_results: 10
+        Payment:
+            class: App\Entity\Payment
+            list:
+                title: "Payments for Events"
+                max_results: 10
+            form:  
+                fields:
+                    - { property: 'membership', type: 'text', label: 'Membership', type_options: { required: true } }
+                    - { property: 'paymentType', type: 'number', label: 'Payment Type', type_options: { required: true } }  
+        Events: 
+            class: App\Entity\Events
+            list:
+                title: "Events"
+                max_results: 10
+        User:
+            class: App\Entity\User
+            list:
+                title: "Users"
+                max_results: 10
+        Score:
+            class: App\Entity\Score
+#            list:
+#                title: "Scores"
+#                max_results: 10
+#            form:  
+#                fields:
+#                    - { property: 'score', type: 'number', label: 'Score', type_options: { required: true } }
+#                    - { property: 'handicap', type: 'number', label: 'Handicap', type_options: { required: true } }
+                    
+                
