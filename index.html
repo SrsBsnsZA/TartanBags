@@ -3,43 +3,24 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.0.1/trianglify.min.js"></script>
-
-  <script>
-  (function() {
-    document.addEventListener('DOMContentLoaded', function() {
-
-    var pattern = Trianglify({
-      cell_size: 75,
-      variance: 0.35,
-      seed: 'tartanbags.co.za',
-      x_colors: ['D3D2C7', '#6EC0C5', '#133DC6'],
-      y_colors: 'random',
-      color_space: 'rgb',
-      color_function: false,
-      width: window.innerWidth,
-      height: window.innerHeight,
-      color_function: null
-    });
-
-    window.onresize = function(){ location.reload(); }
-    window.resize = function(){ location.reload(); }
-    document.body.appendChild(pattern.canvas());
-    });
-  }());
-  </script>
+<head>
 
 </head>
 
 <body>
    <div class='center'>
-      <h1>Reserved for</h1>
+      <h1>New Home of </h1>
       <h2>tartanbags.co.za</h2>
+      <img class="logo" src="logo.png"/>
   </div>
 
   <style>
     body{
       margin: 0;
+  }
+  .logo{
+    height:200px;
+    width:auto;
   }
     .fullscreenDiv {
       background-color: #e8e8e8;
@@ -52,7 +33,7 @@
     }
 
     h1 {
-      color: #ffffff;
+      color: #000;
       font-family: 'Raleway',sans-serif;
       font-size: 2em;
       /*margin: 0 0 24px;*/
@@ -60,7 +41,7 @@
     }
 
     h2 {
-      color: #ffffff;
+      color: #000;
       font-family: 'Raleway',sans-serif;
       font-size: 3em;
       /*margin: 0 0 24px;*/
