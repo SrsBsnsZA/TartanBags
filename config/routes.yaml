@@ -1,6 +1,0 @@
-index:
-    path: /index
-#    controller: App\Controller\DefaultController::index
-# config/routes.yaml
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
